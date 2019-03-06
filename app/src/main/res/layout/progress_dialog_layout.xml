@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:background="@drawable/progress_dialog_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.m163.eyepetizermvpkotlin.widget.dialog.MultipleProgress
+            android:id="@+id/progressView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:progress="0"
+            app:cpv_innerPadding="2dp"
+            app:cpv_outerColor="#E5ffffff"
+            app:cpv_outerSize="1dp"
+            app:cpv_progressNormalColor="#00000000"
+            app:cpv_progressReachColor="#E5ffffff"
+            app:cpv_progressStyle="FillInnerArc"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="正在保存到本地"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</RelativeLayout>
