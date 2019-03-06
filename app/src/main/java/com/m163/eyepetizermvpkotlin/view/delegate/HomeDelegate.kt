@@ -41,7 +41,6 @@ class HomeDelegate : BaseMvpDelegate<HomePresenter>(), HomeView, BaseQuickAdapte
     }
 
     override fun setLayout(): Int {
-
         return R.layout.delegate_home_layout
     }
 
@@ -64,9 +63,7 @@ class HomeDelegate : BaseMvpDelegate<HomePresenter>(), HomeView, BaseQuickAdapte
 
     @SuppressLint("RestrictedApi")
     private fun initView() {
-
         loadingView(true)
-
         tv_bar_title.text = getToday()
         tv_bar_title.typeface = Typeface.createFromAsset(_mActivity.assets, "fonts/Lobster-1.4.otf")
         iv_search.setOnClickListener {

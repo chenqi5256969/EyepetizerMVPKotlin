@@ -78,6 +78,7 @@ dependencies {
     //banner
     implementation 'com.youth.banner:banner:1.4.10'
 
+    //视频播放
     compile 'com.shuyu:GSYVideoPlayer:1.6.8'
 
     //FlexboxLayout

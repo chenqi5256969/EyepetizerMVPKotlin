@@ -1,7 +1,7 @@
 package com.m163.eyepetizermvpkotlin.net
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import com.m163.eyepetizermvpkotlin.LatteApplication
+import com.m163.eyepetizermvpkotlin.application.LatteConfigure
 import com.m163.eyepetizermvpkotlin.net.api.BASE_URL
 import com.m163.eyepetizermvpkotlin.net.api.EyePetizerService
 import com.m163.eyepetizermvpkotlin.net.interceptor.CacheInterceptor
@@ -26,7 +26,7 @@ class RetrofitClient private constructor() {
 
     init {
         if (httpCacheDirectory == null) {
-            httpCacheDirectory = File(LatteApplication.context.cacheDir, httpCacheChild)
+            httpCacheDirectory = File(LatteConfigure.newInstance().getLatteContext().cacheDir, httpCacheChild)
         }
         if (cache == null) {
             cache = Cache(httpCacheDirectory, 10 * 1024 * 1024)

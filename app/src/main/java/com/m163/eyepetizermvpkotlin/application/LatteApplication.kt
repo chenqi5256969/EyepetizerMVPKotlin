@@ -11,6 +11,5 @@ class LatteApplication : Application() {
                 .withContext(this)
                 .withDownloadConfig(this)
                 .withLogger()
-
     }
 }

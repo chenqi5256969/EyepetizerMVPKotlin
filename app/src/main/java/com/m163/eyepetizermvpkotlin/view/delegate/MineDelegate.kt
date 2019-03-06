@@ -5,8 +5,8 @@ import com.m163.eyepetizermvpkotlin.presenter.base.BasePresenter
 import com.m163.eyepetizermvpkotlin.proxy.BaseMvpDelegate
 import com.m163.eyepetizermvpkotlin.view.BaseView
 
-
 class MineDelegate : BaseMvpDelegate<BasePresenter<BaseView>>(), BaseView {
+
     override fun injectComponent() {
 
     }
