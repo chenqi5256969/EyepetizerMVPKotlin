@@ -5,4 +5,5 @@
 2。单Activity+多fragment仿照知乎，优雅的处理生命周期问题
 2.视频播放采用当前流行的GSYVideoPlayer框架
 3.后期会加入检测glide加载图片的进度显示
-[gif] https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/gif/device-2019-03-06-113118.mp4
+![](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/gif/device-2019-03-06-113118.mp4)  
+
