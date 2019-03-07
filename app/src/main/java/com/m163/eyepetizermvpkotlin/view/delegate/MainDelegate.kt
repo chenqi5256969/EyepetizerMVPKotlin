@@ -7,7 +7,11 @@ import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
 import com.m163.eyepetizermvpkotlin.R
 import com.m163.eyepetizermvpkotlin.proxy.BaseDelegate
+import com.m163.eyepetizermvpkotlin.skin.SkinUtils
+import com.m163.eyepetizermvpkotlin.skin.delegate.SkinDelegate
+import com.m163.eyepetizermvpkotlin.skin.inter.IChangeSkinListener
 import kotlinx.android.synthetic.main.delegate_main_layout.*
+
 class MainDelegate : BaseDelegate() {
 
     var fragments = mutableListOf<BaseDelegate>()
@@ -21,7 +25,22 @@ class MainDelegate : BaseDelegate() {
         super.onLazyInitView(savedInstanceState)
         addFragment()
         initBottomNav()
+        theme.setOnClickListener {
+            supportDelegate.start(SkinDelegate())
+        }
     }
+
+    override fun onSupportVisible() {
+        super.onSupportVisible()
+        SkinUtils.setBackground(mainRela, _mActivity, object : IChangeSkinListener {
+            override fun changeSkin(resouceSkin: Int) {
+                if (resouceSkin != 0) {
+                    mainRela.setBackgroundResource(resouceSkin)
+                }
+            }
+        })
+    }
+
 
     private fun addFragment() {
         fragments.add(HomeDelegate())

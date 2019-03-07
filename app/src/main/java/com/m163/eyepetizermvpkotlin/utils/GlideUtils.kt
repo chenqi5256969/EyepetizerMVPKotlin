@@ -24,5 +24,13 @@ class GlideUtils {
                     .apply(options)
                     .into(imageView!!)
         }
+
+        fun loadLocalImage(context: Context, url: Int, imageView: ImageView) {
+            GlideApp.with(context)
+                    .load(url)
+                    .error(R.drawable.image_placeholder)
+                    .apply(options)
+                    .into(imageView!!)
+        }
     }
 }

@@ -84,5 +84,4 @@ dependencies {
     //FlexboxLayout
     implementation 'com.google.android:flexbox:1.0.0'
 
-
 }
