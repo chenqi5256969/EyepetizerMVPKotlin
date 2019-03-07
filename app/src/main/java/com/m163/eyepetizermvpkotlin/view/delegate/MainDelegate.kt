@@ -41,7 +41,6 @@ class MainDelegate : BaseDelegate() {
         })
     }
 
-
     private fun addFragment() {
         fragments.add(HomeDelegate())
         fragments.add(FindDelegate())

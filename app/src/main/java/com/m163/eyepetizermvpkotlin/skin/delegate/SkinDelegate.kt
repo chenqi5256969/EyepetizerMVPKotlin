@@ -13,25 +13,15 @@ import kotlinx.android.synthetic.main.delegate_skin_layout.*
 
 
 class SkinDelegate : BaseDelegate() {
-    /**
-     * 壁纸资源的集合
-     */
+
     private var mList: MutableList<SkinTheme>? = null
 
-    /**
-     * 保存主题壁纸的适配器
-     */
     private var mAdapter: SkinRecyclerAdapter? = null
 
-    /**
-     * 壁纸名
-     */
     private var mWallpaperName: String? = null
 
-    /**
-     * 当前壁纸图片名称
-     */
     private var mCurrentWallpaper: String? = null
+
     private var wallpaperEvent: SkinEvent? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,11 +85,6 @@ class SkinDelegate : BaseDelegate() {
     private fun updateBackground() {
         if (skinBackground != null) {
             SkinUtils.setBackgroundBlur(skinBackground, _mActivity)
-            // 不是app自带壁纸
-            if (mAdapter != null && !wallpaperEvent!!.isAppWallpaper) {
-                mAdapter!!.wallpaperName=""
-                mAdapter!!.notifyDataSetChanged()
-            }
         }
     }
 
