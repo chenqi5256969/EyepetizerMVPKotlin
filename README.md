@@ -6,6 +6,8 @@
 2.视频播放采用当前流行的GSYVideoPlayer框架
 3.后期会加入检测glide加载图片的进度显示
 
-![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-06-11-50-48-85.png)
-![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-06-11-50-57-25.png)
-![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-06-11-51-02-15.png)
+
+![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-07-17-26-53-151_com.m163.eyepe.png)
+![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-07-17-27-11-481_com.m163.eyepe.png)
+![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-07-17-45-00-990_com.m163.eyepe.png)
+![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-07-17-27-32-189_com.m163.eyepe.png)
