@@ -1,24 +1,30 @@
 package com.m163.eyepetizermvpkotlin.net.api
 
 import com.m163.eyepetizermvpkotlin.module.FindBean
+import com.m163.eyepetizermvpkotlin.module.HomeFindBean
 import com.m163.eyepetizermvpkotlin.module.HotBean
 import com.m163.eyepetizermvpkotlin.module.repository.EyePetizerRepository
-import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean
+import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeRecommendBean
 import io.reactivex.Observable
 import javax.inject.Inject
 
 
 class EyePetizerServiceImpl @Inject constructor() : EyePetizerService {
 
+
     lateinit var repository: EyePetizerRepository
         @Inject set
 
-    override fun getHomeData(): Observable<HomeBean> {
+    override fun getHomeData(): Observable<HomeRecommendBean> {
         return repository.getHomeData()
     }
 
-    override fun addHomeData(url: String): Observable<HomeBean> {
+    override fun addHomeData(url: String): Observable<HomeRecommendBean> {
         return repository.addHomeData(url)
+    }
+
+    override fun getHomeFindData(url: String): Observable<HomeFindBean> {
+        return repository.getHomeFindData(url)
     }
 
     override fun getFindData(): Observable<MutableList<FindBean>> {

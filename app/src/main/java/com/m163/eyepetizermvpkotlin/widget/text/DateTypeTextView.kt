@@ -1,4 +1,4 @@
-package com.m163.eyepetizermvpkotlin.widget
+package com.m163.eyepetizermvpkotlin.widget.text
 
 import android.content.Context
 import android.graphics.Typeface
@@ -6,7 +6,7 @@ import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
 
 
-class TypeTextView @JvmOverloads constructor(context: Context, attr: AttributeSet? = null, defStyleAttr: Int = 0)
+class DateTypeTextView @JvmOverloads constructor(context: Context, attr: AttributeSet? = null, defStyleAttr: Int = 0)
     : AppCompatTextView(context, attr, defStyleAttr) {
 
     init {

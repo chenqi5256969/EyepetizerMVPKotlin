@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homeFindVideoRela"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:padding="10dp"
+    >
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/homeFindVideoImage"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"/>
+
+    <com.m163.eyepetizermvpkotlin.widget.text.TitleTypeTextView
+        android:id="@+id/homeFindVideoDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/homeFindVideoImage"
+        android:layout_alignBottom="@+id/homeFindVideoImage"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/progress_dialog_bg"
+        android:padding="5dp"
+        android:text="时间"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        android:textStyle="bold"/>
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/homeFindVideoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/homeFindVideoImage"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/homeFindVideoImage"
+        android:text="标题"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/homeFindVideoClassify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@+id/homeFindVideoImage"
+        android:textColor="@color/gray"
+        android:textSize="13dp"/>
+</RelativeLayout>

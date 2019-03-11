@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.m163.eyepetizermvpkotlin.widget.ResideLayout
+<android.support.v7.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,6 +9,7 @@
     tools:ignore="NamespaceTypo">
 
     <RelativeLayout
+        android:visibility="gone"
         android:id="@+id/mainRela"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -143,4 +144,4 @@
 
     </android.support.v7.widget.LinearLayoutCompat>
 
-</com.m163.eyepetizermvpkotlin.widget.ResideLayout>
+</android.support.v7.widget.LinearLayoutCompat>

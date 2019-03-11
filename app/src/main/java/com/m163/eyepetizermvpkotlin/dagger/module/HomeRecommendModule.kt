@@ -7,7 +7,7 @@ import dagger.Provides
 
 
 @Module
-class HomeModule {
+class HomeRecommendModule {
 
     @Provides
     fun provide(impl: EyePetizerServiceImpl): EyePetizerService {

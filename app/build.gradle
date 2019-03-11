@@ -30,6 +30,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    //cardView
+    implementation 'com.android.support:cardview-v7:21.0.3'
     //kotlin支持包
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     //anko
