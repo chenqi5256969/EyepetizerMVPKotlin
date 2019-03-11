@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.ContentFrameLayout
+import com.jaeger.library.StatusBarUtil
 import com.m163.eyepetizermvpkotlin.R
 import me.yokeyword.fragmentation.ExtraTransaction
 import me.yokeyword.fragmentation.ISupportActivity
@@ -21,6 +22,7 @@ abstract class ProxyActivity : AppCompatActivity(), ISupportActivity {
         super.onCreate(savedInstanceState)
         activityDelegate.onCreate(savedInstanceState)
         addView(savedInstanceState)
+        StatusBarUtil.setTranslucentForImageViewInFragment(this@ProxyActivity,0, null)
     }
 
     @SuppressLint("RestrictedApi")

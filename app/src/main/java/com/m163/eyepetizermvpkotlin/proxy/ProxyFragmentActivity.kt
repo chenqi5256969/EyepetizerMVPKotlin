@@ -10,6 +10,4 @@ class ProxyFragmentActivity : ProxyActivity() {
     override fun toFragment(): ISupportFragment? {
         return SplashDelegate()
     }
-
-
 }
