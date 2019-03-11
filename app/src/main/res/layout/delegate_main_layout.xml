@@ -1,147 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/resideLayout"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:ignore="NamespaceTypo">
 
-    <RelativeLayout
-        android:visibility="gone"
-        android:id="@+id/mainRela"
+
+    <FrameLayout
+        android:id="@+id/mContaier"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@mipmap/landing_background">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
 
-
-        <android.support.v7.widget.LinearLayoutCompat
-            android:id="@+id/top_menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <android.support.v7.widget.AppCompatImageView
-                android:id="@+id/profile_image"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="55dp"
-                android:src="@mipmap/icon_user"
-                />
-
-            <TextView
-                android:id="@+id/desc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="80dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:padding="10dp"
-                android:text="用户名"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"/>
-
-        </android.support.v7.widget.LinearLayoutCompat>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/top_menu">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_collect"
-                    style="@style/MenuStyle"
-                    android:drawableLeft="@mipmap/downloads"
-                    android:text="离线缓存"
-                    />
-
-                <TextView
-
-                    android:id="@+id/tv_mydown"
-                    style="@style/MenuStyle"
-                    android:drawableLeft="@mipmap/history"
-                    android:text="观看记录"
-
-                    />
-
-                <TextView
-                    android:id="@+id/tv_fuli"
-                    style="@style/MenuStyle"
-                    android:drawableLeft="@mipmap/movie"
-                    android:text="热议电影"
-                    />
-
-                <TextView
-                    android:id="@+id/tv_share"
-                    style="@style/MenuStyle"
-                    android:drawableLeft="@mipmap/share"
-                    android:text="分享"
-                    />
-
-            </LinearLayout>
-
-        </ScrollView>
-
-        <LinearLayout
-            android:id="@+id/bottom_menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/about"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:drawableLeft="@mipmap/about"
-                android:padding="12dp"
-                android:text="关于"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"/>
-
-            <TextView
-                android:id="@+id/theme"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:drawableLeft="@mipmap/them"
-                android:padding="12dp"
-                android:text="主题"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"/>
-
-        </LinearLayout>
-    </RelativeLayout>
-
-    <android.support.v7.widget.LinearLayoutCompat
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/mBottomNavBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="50dp"
+        />
 
-        <FrameLayout
-            android:id="@+id/mContaier"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            />
-
-        <com.ashokvarma.bottomnavigation.BottomNavigationBar
-            android:id="@+id/mBottomNavBar"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            />
-
-    </android.support.v7.widget.LinearLayoutCompat>
 
 </android.support.v7.widget.LinearLayoutCompat>
