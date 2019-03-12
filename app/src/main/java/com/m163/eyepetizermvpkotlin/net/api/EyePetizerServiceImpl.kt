@@ -12,6 +12,17 @@ import javax.inject.Inject
 class EyePetizerServiceImpl @Inject constructor() : EyePetizerService {
 
 
+    override fun getWXUserInfoUrl(url: String): Observable<String> {
+        repository = EyePetizerRepository()
+        return repository.getWXUserInfoUrl(url)
+    }
+
+    override fun getWXUserInfo(url: String): Observable<String> {
+        repository = EyePetizerRepository()
+        return repository.getWXUserInfo(url)
+    }
+
+
     lateinit var repository: EyePetizerRepository
         @Inject set
 

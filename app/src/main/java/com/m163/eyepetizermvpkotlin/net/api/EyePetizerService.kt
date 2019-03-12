@@ -22,7 +22,7 @@ interface EyePetizerService {
     fun addHomeData(@Url url: String): Observable<HomeRecommendBean>
 
     @GET
-    fun getHomeFindData(@Url url:String) :Observable<HomeFindBean>
+    fun getHomeFindData(@Url url: String): Observable<HomeFindBean>
 
     @GET("v2/categories?udid=26868b32e808498db32fd51fb422d00175e179df&vc=83")
     fun getFindData(): Observable<MutableList<FindBean>>
@@ -37,5 +37,10 @@ interface EyePetizerService {
     fun getSearchData(@Query("num") num: Int, @Query("query") query: String,
                       @Query("start") start: Int): Observable<HotBean>
 
+    @GET
+    fun getWXUserInfoUrl(@Url url: String): Observable<String>
+
+    @GET
+    fun getWXUserInfo(@Url url: String): Observable<String>
 
 }

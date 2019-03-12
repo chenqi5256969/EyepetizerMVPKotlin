@@ -10,6 +10,7 @@ class LatteApplication : Application() {
                 .newInstance()
                 .withContext(this)
                 .withDownloadConfig(this)
+                .withWXRegister(this)
                 .withLogger()
     }
 }

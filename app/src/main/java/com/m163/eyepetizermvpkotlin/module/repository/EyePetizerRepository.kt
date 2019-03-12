@@ -34,4 +34,13 @@ class EyePetizerRepository @Inject constructor() {
     fun getSearchData(query: String, start: Int): Observable<HotBean> {
         return RetrofitClient.getInstance()!!.creatApiService().getSearchData(10, query, start)
     }
+
+    fun getWXUserInfoUrl(url: String): Observable<String> {
+        return RetrofitClient.getInstance()!!.creatApiService().getWXUserInfoUrl(url)
+    }
+
+    fun getWXUserInfo(url: String): Observable<String> {
+        return RetrofitClient.getInstance()!!.creatApiService().getWXUserInfo(url)
+    }
+
 }
