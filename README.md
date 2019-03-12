@@ -11,7 +11,13 @@
 
 # app展示：
 
-![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-07-17-26-53-151_com.m163.eyepe.png)
-![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-07-17-27-11-481_com.m163.eyepe.png)
-![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-07-17-45-00-990_com.m163.eyepe.png)
-![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_2019-03-07-17-27-32-189_com.m163.eyepe.png)
+# 首页展示内容
+![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_1552384093.png)
+![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_1552384096.png)
+![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_1552384102.png)
+
+# 视频播放界面
+![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_1552384107.png)
+
+# 登录界面
+![image](https://github.com/chenqi5256969/EyepetizerMVPKotlin/blob/master/image/Screenshot_1552384147.png)
