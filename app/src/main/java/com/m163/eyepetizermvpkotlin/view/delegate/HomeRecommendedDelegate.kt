@@ -25,8 +25,6 @@ class HomeRecommendedDelegate : BaseMvpDelegate<HomeRecommendPresenter>(), IHome
 
     private lateinit var mAdapter: HomeRecommendRecyclerMultiAdapter
     private lateinit var mSelectAdapter: HomeRecommendSelectedRecyclerAdapter
-
-
     private var snapHelper: PagerSnapHelper = PagerSnapHelper()
     private var oneRequest = 1
     private var nextPagerUrl: String? = null
@@ -34,7 +32,7 @@ class HomeRecommendedDelegate : BaseMvpDelegate<HomeRecommendPresenter>(), IHome
     override fun injectComponent() {
         DaggerHomeRecommendComponent
                 .builder()
-                .homeRecommendModule(HomeRecommendModule())
+                .homeRecommendModule(HomeRecommendModule(this))
                 .build()
                 .inject(this)
         mPresenter.mView = this

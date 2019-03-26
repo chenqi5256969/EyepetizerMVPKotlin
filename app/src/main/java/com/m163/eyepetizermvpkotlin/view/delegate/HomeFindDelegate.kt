@@ -17,7 +17,7 @@ class HomeFindDelegate : BaseMvpDelegate<HomeFindPresenter>(), IHomeFindView {
     override fun injectComponent() {
         DaggerHomeFindComponent
                 .builder()
-                .homeFindModule(HomeFindModule())
+                .homeFindModule(HomeFindModule(this))
                 .build()
                 .inject(this)
         mPresenter.mView = this

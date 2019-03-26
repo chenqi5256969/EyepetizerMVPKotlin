@@ -6,6 +6,7 @@ import com.m163.eyepetizermvpkotlin.module.HotBean
 import com.m163.eyepetizermvpkotlin.net.api.EyePetizerService
 import com.m163.eyepetizermvpkotlin.presenter.base.BasePresenter
 import com.m163.eyepetizermvpkotlin.view.HotRankView
+import com.trello.rxlifecycle2.LifecycleProvider
 import javax.inject.Inject
 
 
@@ -13,6 +14,9 @@ class HotRankPresenter @Inject constructor() : BasePresenter<HotRankView>() {
 
     lateinit var impl: EyePetizerService
         @Inject set
+
+    lateinit var lifecycleProvider: LifecycleProvider<*>
+    @Inject set
 
     fun getHotData(strategy: String) {
         impl.getHotData(0, strategy, "", 0).excute(object : BaseObserver<HotBean>() {
@@ -22,6 +26,6 @@ class HotRankPresenter @Inject constructor() : BasePresenter<HotRankView>() {
 
             override fun onError(e: Throwable) {
             }
-        })
+        },lifecycleProvider)
     }
 }

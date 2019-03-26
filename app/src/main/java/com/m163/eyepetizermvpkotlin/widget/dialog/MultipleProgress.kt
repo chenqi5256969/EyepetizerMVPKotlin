@@ -18,7 +18,6 @@ import com.m163.eyepetizermvpkotlin.ext.sp2px
  */
 class MultipleProgress @JvmOverloads constructor(context: Context, attributeSet: AttributeSet? = null, defStyleAttr: Int = 0) :
         ProgressBar(context, attributeSet, defStyleAttr) {
-
     // 完成进度条大小
     private var mReachBarSize = dp2px(2f)
     // 未完成进度条大小
@@ -342,15 +341,16 @@ class MultipleProgress @JvmOverloads constructor(context: Context, attributeSet:
         if (needDrawInnerBackground) {
             canvas.drawCircle(0f, 0f,
                     rectF!!.right - Math.min(mReachBarSize, mNormalBarSize) / 2,
-                    mNormalPaint)
+                    mNormalPaint!!)
         }
         //绘制文字
         if (mTextVisible) {
+
             val text = mTextPrefix + progress + mTextSuffix
             val textWidth = mTextPaint!!.measureText(text)
             val textHeight = mTextPaint!!.descent() + mTextPaint!!.ascent()
             //这是绘制文字的通用套路
-            canvas.drawText(text, -textWidth / 2, -textHeight / 2, mTextPaint)
+            canvas.drawText(text, -textWidth / 2, -textHeight / 2, mTextPaint!!)
         }
         //计算进度
         var reachArc = progress * 1f / max * 360
@@ -389,6 +389,7 @@ class MultipleProgress @JvmOverloads constructor(context: Context, attributeSet:
             //绘制文字的套路
             val textWidth = mTextPaint!!.measureText(text)
             val textHeight = mTextPaint!!.descent() + mTextPaint!!.ascent()
+
             canvas.drawText(text, -textWidth / 2, -textHeight / 2, mTextPaint)
         }
     }

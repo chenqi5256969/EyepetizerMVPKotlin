@@ -83,7 +83,7 @@ class SearchDetailDelegate : BaseMvpDelegate<SearchDetailPresenter>(), SearchDet
     override fun injectComponent() {
         DaggerSearchDetailComponent
                 .builder()
-                .searchDetailModule(SearchDetailModule())
+                .searchDetailModule(SearchDetailModule(this))
                 .build()
                 .inject(this)
         mPresenter.mView = this

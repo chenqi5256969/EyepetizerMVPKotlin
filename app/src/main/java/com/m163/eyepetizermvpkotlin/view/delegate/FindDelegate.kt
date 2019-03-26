@@ -26,7 +26,7 @@ class FindDelegate : BaseMvpDelegate<FindPresenter>(), FindView {
     override fun injectComponent() {
         DaggerFindComponent
                 .builder()
-                .findModule(FindModule())
+                .findModule(FindModule(this))
                 .build()
                 .inject(this)
         mPresenter.mView = this

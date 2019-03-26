@@ -1,9 +1,13 @@
 package com.m163.eyepetizermvpkotlin.net
 
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.m163.eyepetizermvpkotlin.application.LatteConfigure
 import com.m163.eyepetizermvpkotlin.net.api.BASE_URL
 import com.m163.eyepetizermvpkotlin.net.api.EyePetizerService
+import com.m163.eyepetizermvpkotlin.net.gson.IntegerDefault0Adapter
+import com.m163.eyepetizermvpkotlin.net.gson.StringDefault0Adapter
 import com.m163.eyepetizermvpkotlin.net.interceptor.CacheInterceptor
 import okhttp3.Cache
 import okhttp3.OkHttpClient
@@ -42,7 +46,7 @@ class RetrofitClient private constructor() {
 
         retrofit = Retrofit.Builder()
                 .client(okHttpClient)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(getGson()))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .baseUrl(BASE_URL)
                 .build()
@@ -61,6 +65,13 @@ class RetrofitClient private constructor() {
             }
             return instance
         }
+    }
+
+
+    fun getGson(): Gson {
+        return GsonBuilder().registerTypeAdapter(Int::class.java, IntegerDefault0Adapter())
+                .registerTypeAdapter(String::class.java, StringDefault0Adapter())
+                .create()
     }
 
     fun creatApiService(): EyePetizerService {

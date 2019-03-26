@@ -38,7 +38,7 @@ class HotRankDelegate : BaseMvpDelegate<HotRankPresenter>(), HotRankView {
     override fun injectComponent() {
         DaggerHotRankComponent
                 .builder()
-                .hotRankModule(HotRankModule())
+                .hotRankModule(HotRankModule(this))
                 .build()
                 .inject(this)
         mPresenter.mView = this

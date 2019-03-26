@@ -52,6 +52,7 @@ class SkinDelegate : BaseDelegate() {
                 val theme = SkinTheme()
                 theme.mResName = name
                 theme.mResId = field.getInt(R.drawable::class.java)
+             // theme.mResId = field.getInt(R.drawable())
                 mList!!.add(theme)
             }
         }

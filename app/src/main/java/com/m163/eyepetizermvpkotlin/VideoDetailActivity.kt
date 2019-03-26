@@ -22,7 +22,6 @@ import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.delegate_videodetail_layout.*
 import zlc.season.rxdownload3.RxDownload
-import java.io.File
 import java.lang.ref.WeakReference
 
 class VideoDetailActivity : AppCompatActivity() {
@@ -31,7 +30,7 @@ class VideoDetailActivity : AppCompatActivity() {
     lateinit var videoPlayer: StandardGSYVideoPlayer
     lateinit var handler: Handler
     lateinit var orientationUtils: OrientationUtils
-    lateinit var parentFile: File
+
     var isPlay: Boolean = false
     var isPause: Boolean = false
 
@@ -157,7 +156,7 @@ class VideoDetailActivity : AppCompatActivity() {
             RxDownload.create(videoBean.playUrl!!
                     , true).observeOn(AndroidSchedulers.mainThread()).subscribe { t ->
                 val percent = (t!!.downloadSize.toDouble() / t!!.totalSize.toDouble()) * 100
-                multipleProgress.progress=percent.toInt()
+                multipleProgress.progress = percent.toInt()
             }
         }
     }

@@ -2,13 +2,14 @@ package com.m163.eyepetizermvpkotlin.ext
 
 import com.jakewharton.retrofit2.adapter.rxjava2.HttpException
 import com.m163.eyepetizermvpkotlin.callback.BaseObserver
+import com.trello.rxlifecycle2.LifecycleProvider
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 
-fun <T> Observable<T>.excute(baseObserver: BaseObserver<T>) {
+fun <T> Observable<T>.excute(baseObserver: BaseObserver<T>, lifecycleProvider: LifecycleProvider<*>) {
     var repeatCount = 0
     val maxCount = 10
     var waitRetryTime: Int
@@ -27,7 +28,7 @@ fun <T> Observable<T>.excute(baseObserver: BaseObserver<T>) {
                 Observable.error<T>(Throwable("发生了非网络异常（非I/O异常）"))
             }
         }
-    }
+    }.compose(lifecycleProvider.bindToLifecycle())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe(baseObserver)

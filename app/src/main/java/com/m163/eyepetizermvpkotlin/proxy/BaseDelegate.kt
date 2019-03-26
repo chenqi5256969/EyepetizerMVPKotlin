@@ -3,11 +3,11 @@ package com.m163.eyepetizermvpkotlin.proxy
 import android.app.Activity
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.trello.rxlifecycle2.components.support.RxFragment
 
 import me.yokeyword.fragmentation.ExtraTransaction
 import me.yokeyword.fragmentation.ISupportFragment
@@ -15,7 +15,7 @@ import me.yokeyword.fragmentation.SupportFragmentDelegate
 import me.yokeyword.fragmentation.anim.FragmentAnimator
 
 
-abstract class BaseDelegate : ISupportFragment,Fragment() {
+abstract class BaseDelegate :ISupportFragment,RxFragment() {
 
     private val DELEGATE =
             SupportFragmentDelegate(this)
@@ -46,7 +46,6 @@ abstract class BaseDelegate : ISupportFragment,Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
         var rootView: View? = null
         rootView = inflater.inflate(setLayout(), container, false)
         return rootView

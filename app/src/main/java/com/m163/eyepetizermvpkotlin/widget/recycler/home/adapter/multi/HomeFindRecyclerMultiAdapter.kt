@@ -64,7 +64,6 @@ class HomeFindRecyclerMultiAdapter constructor(data: MutableList<HomeFindBean.It
                 val seconds = duration?.minus((minute?.times(60)))
                 helper.getView<AppCompatTextView>(R.id.homeFindVideoDuration).text = "$minute:$seconds"
                 helper.getView<RelativeLayout>(R.id.homeFindVideoRela).setOnClickListener {
-
                     val intent = Intent(context, VideoDetailActivity::class.java)
                     intent.putExtra("example", addVideoBean(item))
                     context.startActivity(intent)

@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.LinearLayoutCompat
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/hotToolbar"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/colorPrimary">
+        android:layout_height="wrap_content">
 
-        <TextView
+        <android.support.v7.widget.Toolbar
+            android:layout_marginTop="10dp"
+            android:id="@+id/hotToolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="热门"
-            android:textColor="@color/white"/>
-    </android.support.v7.widget.Toolbar>
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways">
 
-    <android.support.design.widget.TabLayout
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="热门"
+                android:textColor="@color/white"/>
+        </android.support.v7.widget.Toolbar>
 
-        android:id="@+id/hotTab"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:tabIndicatorColor="@color/colorPrimary"
-        app:tabIndicatorHeight="3dp"/>
+        <android.support.design.widget.TabLayout
+            android:background="@android:color/white"
+            android:id="@+id/hotTab"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorHeight="3dp"/>
+    </android.support.design.widget.AppBarLayout>
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/hotViewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 
-</android.support.v7.widget.LinearLayoutCompat>
+</android.support.design.widget.CoordinatorLayout>

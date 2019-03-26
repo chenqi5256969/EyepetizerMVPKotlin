@@ -22,12 +22,6 @@ class MainDelegate : BaseDelegate() {
         super.onLazyInitView(savedInstanceState)
         addFragment()
         initBottomNav()
-
-    }
-
-    override fun onSupportVisible() {
-        super.onSupportVisible()
-
     }
 
     private fun addFragment() {
@@ -38,6 +32,7 @@ class MainDelegate : BaseDelegate() {
 
         supportDelegate.loadMultipleRootFragment(R.id.mContaier, 0, fragments[0], fragments[1], fragments[2], fragments[3])
     }
+
 
     private fun initBottomNav() {
         mBottomNavBar.setMode(BottomNavigationBar.MODE_FIXED)

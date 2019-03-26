@@ -35,6 +35,7 @@ class HotDelegate : BaseDelegate() {
     }
 
     override fun setLayout(): Int {
+        
         return R.layout.delegate_hot_layout
     }
 

@@ -6,6 +6,7 @@ import com.m163.eyepetizermvpkotlin.ext.excute
 import com.m163.eyepetizermvpkotlin.net.api.EyePetizerService
 import com.m163.eyepetizermvpkotlin.presenter.base.BasePresenter
 import com.m163.eyepetizermvpkotlin.view.IHomeRecommendView
+import com.trello.rxlifecycle2.LifecycleProvider
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeRecommendBean
 import javax.inject.Inject
 
@@ -13,6 +14,11 @@ class HomeRecommendPresenter @Inject constructor() : BasePresenter<IHomeRecommen
 
     lateinit var impl: EyePetizerService
         @Inject set
+
+    lateinit var lifecycleProvider: LifecycleProvider<*>
+        @Inject set
+
+
     var data = mutableListOf<HomeRecommendBean>()
 
     @SuppressLint("CheckResult")
@@ -25,7 +31,7 @@ class HomeRecommendPresenter @Inject constructor() : BasePresenter<IHomeRecommen
 
                     override fun onError(e: Throwable) {
                     }
-                })
+                },lifecycleProvider)
 
     }
 
@@ -37,7 +43,7 @@ class HomeRecommendPresenter @Inject constructor() : BasePresenter<IHomeRecommen
 
             override fun onError(e: Throwable) {
             }
-        })
+        },lifecycleProvider)
     }
 
     /*

@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewAnimationUtils
 import android.view.animation.DecelerateInterpolator
 
-
 class CircularRevealAnim {
     companion object {
 
         val DURATION: Long = 800
+
     }
 
     private var mListener: AnimListener? = null
@@ -22,6 +22,7 @@ class CircularRevealAnim {
 
         fun onShowAnimationEnd()
     }
+
 
     @SuppressLint("NewApi")
     private fun actionOtherVisible(isShow: Boolean, triggerView: View, animView: View) {
