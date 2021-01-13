@@ -1,4 +1,4 @@
-# EyepetizerMVPKotlin
+# EyepetizerMVPKotlin（已经使用jetpack重构，地址：https://github.com/chenqi5256969/Eyepetizer-Jetpack
 ## 模仿开眼视频的kotlin项目，采用单Activity+Fragment的设计，利用dagger优雅的实现mvp架构
 
 ##### 1.网络缓存+断网，出错自动重连（10次）  
